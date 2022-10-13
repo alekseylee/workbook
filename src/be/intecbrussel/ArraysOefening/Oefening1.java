@@ -5,20 +5,20 @@ import java.util.Scanner;
 
 public class Oefening1 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the number of elements you want: ");
-        int n=scan.nextInt();
-        int[] array = new int[10];
-        System.out.println("Enter the elements of the array: ");
-        for(int i=0; i<n; i++)
-        {
-            array[i]=scan.nextInt();
-        }
-        System.out.println("Array elements are: ");
-        for (int i=0; i<n; i++)
-        {
-            System.out.println(array[i]);
-        }
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Enter the number of elements you want: ");
+//        int n=scan.nextInt();
+//        int[] array = new int[10];
+//        System.out.println("Enter the elements of the array: ");
+//        for(int i=0; i<n; i++)
+//        {
+//            array[i]=scan.nextInt();
+//        }
+//        System.out.println("Array elements are: ");
+//        for (int i=0; i<n; i++)
+//        {
+//            System.out.println(array[i]);
+//        }
 
 //        oefening 2
 
@@ -47,15 +47,12 @@ public class Oefening1 {
 
         //oefening 5
 
-//       int[] numbers = {1,2,16,10,5};
-//        String[] letters = {"a", "b", "p", "o", "z"};
-//        Arrays.sort(numbers);
-//        System.out.println("\nThe sorted numbers are: ");
-//        for (int num : numbers) {
-//            System.out.print(num + " | ");
-//        }
-//        for (String let : letters) {
-//            System.out.print(" | " + let);
-//        }
+       int[] numbers = {1,2,16,10,5};
+       System.out.println("\nThe numbers are: " + Arrays.toString(numbers));
+
+       Arrays.sort(numbers);
+
+       System.out.println("Sorted numbers arrays: " + Arrays.toString(numbers));
+
     }
 }
