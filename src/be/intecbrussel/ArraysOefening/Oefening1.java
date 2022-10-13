@@ -46,13 +46,13 @@ public class Oefening1 {
 //        }
 
         //oefening 5
-
-       int[] numbers = {1,2,16,10,5};
-       System.out.println("\nThe numbers are: " + Arrays.toString(numbers));
-
-       Arrays.sort(numbers);
-
-       System.out.println("Sorted numbers arrays: " + Arrays.toString(numbers));
+//
+//       int[] numbers = {1,2,16,10,5};
+//       System.out.println("\nThe numbers are: " + Arrays.toString(numbers));
+//
+//       Arrays.sort(numbers);
+//
+//       System.out.println("Sorted numbers arrays: " + Arrays.toString(numbers));
 
     }
 }
