@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.samenvatting123;
 
 public class Samenvatting1 {
 

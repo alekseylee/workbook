@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.basisprogramoefening;
 import java.util.Scanner;
 public class basisprogramoefening {
     public static void main(String [] args) {

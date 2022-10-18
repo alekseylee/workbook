@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.otherstuff;
 
 import java.util.Arrays;
 

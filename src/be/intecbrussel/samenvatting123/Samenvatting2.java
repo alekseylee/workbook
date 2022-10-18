@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.samenvatting123;
 
 public class Samenvatting2 {
     public static void main(String[] args) {

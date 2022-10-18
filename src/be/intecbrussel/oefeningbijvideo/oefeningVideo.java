@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.oefeningbijvideo;
 
 import java.util.Scanner;
 

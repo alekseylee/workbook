@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.otherstuff;
 
 public class Builder {
     public static void main(String[] args) {
