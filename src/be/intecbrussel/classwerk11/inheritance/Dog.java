@@ -1,10 +1,11 @@
-package be.intecbrussel.classwerk8.inheritance;
+package be.intecbrussel.classwerk11.inheritance;
 
 public class Dog extends Animal {
 
     public Dog(String nameAnimal, int ageAnimal) {
         super(nameAnimal, ageAnimal);
     }
+
 
 
     public void eat(){
@@ -16,9 +17,6 @@ public class Dog extends Animal {
 
     public void soundAnimal(){
         System.out.println("Animal sounds like: BARK! BARK! BARK!");
-    }
-    public void sayDog(){
-        super.soundAnimal();
     }
 
 }

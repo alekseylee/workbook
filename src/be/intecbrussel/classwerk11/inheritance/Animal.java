@@ -1,14 +1,15 @@
-package be.intecbrussel.classwerk11.oefening1;
+package be.intecbrussel.classwerk11.inheritance;
 
-public class Dog extends Animal {
+public class Animal {
     private String nameAnimal;
     private int ageAnimal;
 
-    public Dog (String nameAnimal, int ageAnimal) {
+
+
+    public Animal(String nameAnimal, int ageAnimal) {
         this.nameAnimal = nameAnimal;
         this.ageAnimal = ageAnimal;
     }
-
     public String getNameAnimal() {
         return nameAnimal;
     }
@@ -25,7 +26,16 @@ public class Dog extends Animal {
         this.ageAnimal = ageAnimal;
     }
 
-    public void animalSound() {
-        System.out.println("This animal sound is - Bark Bark");
+    public void eat() {
+        System.out.println("Animal is eating");
     }
+    public void sleep(){
+        System.out.println("Animal is sleeping");
+    }
+
+    public void soundAnimal(){
+        System.out.println("Sound of animal");
+    }
+
+
 }
