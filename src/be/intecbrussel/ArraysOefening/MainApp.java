@@ -2,9 +2,6 @@ package be.intecbrussel.ArraysOefening;
 
 import java.util.Scanner;
 
-
-
-
 public class MainApp {
     public static void main(String[] args) {
         Search search = new Search();
