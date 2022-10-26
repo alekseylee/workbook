@@ -4,16 +4,22 @@ public class Suv extends Car{
 
     private boolean bullbar;
 
-    public Suv(String color, int hp) {
-        super(color, hp);
+    public Suv(String color, int hp, int speed) {
+        super(color, hp, speed);
     }
 
-    public boolean getBullbar(boolean bullbar) {
+
+    public boolean isBullbar() {
         return bullbar;
     }
 
-    public void driving4x4 (boolean a) {
+    public void setBullbar(boolean bullbar) {
+        this.bullbar = bullbar;
+    }
+
+    public void driving4x4 (boolean bullbar) {
         while (true) {
+            System.out.println("You drive ");
 //            for ()
         }
     }

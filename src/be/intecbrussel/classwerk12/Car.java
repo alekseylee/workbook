@@ -1,26 +1,25 @@
 package be.intecbrussel.classwerk12;
 
-public class Car {
+public abstract class Car {
     private String color;
     protected int speed;
     private int hp;
 
-
-
-
-
     public Car() {
+        this.color = this.color;
+        this.hp = this.hp;
+        this.speed = speed;
+    }
+    public Car(String color, int hp, int speed) {
         this.color = color;
         this.hp = hp;
-    }
-    public Car(String color, int hp) {
-        this.color = color;
-        this.hp = hp;
-    }
-    public void speed (int speed) {
         this.speed = speed;
     }
 
+
+    public void speed (int speed) {
+        this.speed = speed;
+    }
 
     public String getColor() {
         return color;
@@ -39,7 +38,7 @@ public class Car {
     }
 
     public void slowDown(int speed) {
-        this.slowDown(speed - (hp/100));
+        this.speed = speed - (hp/100);
     }
 
     public void parking (int speed) {
@@ -47,7 +46,7 @@ public class Car {
             this.speed = getSpeed();
             System.out.println("Car is parked");
         } else {
-            System.out.println("You driving");
+            System.out.println("You can park when your speed is 0");
         }
     }
 
