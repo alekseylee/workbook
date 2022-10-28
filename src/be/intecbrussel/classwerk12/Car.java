@@ -6,9 +6,6 @@ public abstract class Car {
     private int hp;
 
     public Car() {
-        this.color = this.color;
-        this.hp = this.hp;
-        this.speed = speed;
     }
     public Car(String color, int hp, int speed) {
         this.color = color;
@@ -37,7 +34,7 @@ public abstract class Car {
         this.speed = speed + (hp / 100);
     }
 
-    public void slowDown(int speed) {
+    public void slowDown() {
         this.speed = speed - (hp/100);
     }
 
@@ -52,6 +49,15 @@ public abstract class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color='" + color + '\'' +
+                ", speed=" + speed +
+                ", hp=" + hp +
+                '}';
     }
 }
 

@@ -3,20 +3,17 @@ package be.intecbrussel.classwerk12;
 public class Electric extends Car{
     private int battery;
 
-    public Electric(String color, int battery, int speed) {
-        super(color, battery, speed);
+    public Electric(String color, int hp, int speed, int battery) {
+        super(color, hp, speed);
+        this.battery=battery;
     }
-
-//    public void acceleration() {
-//        this.speed = speed + (battery / 100);
-//    }
 
     @Override
     public void acceleration() {
-        this.speed = speed+((battery/100));
+        this.speed = speed+ (battery/100);
     }
 
-    public void slowDown(int speed) {
+    public void slowDown() {
         this.speed= speed - (battery/100);
     }
 
