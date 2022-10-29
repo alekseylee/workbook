@@ -10,29 +10,32 @@ public class MainApp {
         SiameseCat siameseCat = new SiameseCat('s','s', "white", 5, "Simba", 4, 333,543);
         TurkishVanCat turkishVanCat = new TurkishVanCat('s','s', "white", 3, "Snowball", 8, 390, 543);
         PersianCat persianCat = new PersianCat('s','s',"ginger", 11, "Polly", 14, 333,543);
+//        System.out.println(norwegianForestCat);
+//        System.out.println(panthera);
+//        panthera.hunt();
+//        panthera.roar();
 
-        System.out.println(panthera);
-        panthera.hunt();
-        panthera.roar();
+//        System.out.println(cheetah);
+//        System.out.println(cheetah.isAlive());
+//        cheetah.run(5.5);
+//        cheetah.kiauuww();
 
-        System.out.println(cheetah);
-        cheetah.run(5.5);
-        cheetah.kiauuww();
 
-        System.out.println(norwegianForestCat);
-        norwegianForestCat.miauwInNorvegian();
+//        System.out.println(norwegianForestCat);
+//        norwegianForestCat.miauwInNorvegian(5);
+//
+//        System.out.println(andeanMountainCat);
+//        andeanMountainCat.miauw(3);
+//        System.out.println("This cat is alive - " +andeanMountainCat.isAlive());
 
-        System.out.println(andeanMountainCat);
-        andeanMountainCat.miauw();
-        andeanMountainCat.isAlive();
-
-        System.out.println(siameseCat);
-
-        System.out.println(persianCat);
-        persianCat.miauw();
-
-        System.out.println(turkishVanCat);
-        System.out.println(turkishVanCat.nickname);
+//        System.out.println(siameseCat);
+//
+//        System.out.println(persianCat);
+//        persianCat.miauw(2);
+//
+//        System.out.println(turkishVanCat);
+//        System.out.println(turkishVanCat.nickname);
+//            turkishVanCat.miauw(10);
 
 
 //        Felis felis01 = new Felis();
@@ -48,7 +51,7 @@ public class MainApp {
 //        }
 
 
-
+//        System.out.println(Felis.getVaccinatedCats());
 //        System.out.println(persianCat);
 //        System.out.println(siameseCat);
 //        System.out.println(persianCat.equals(siameseCat));

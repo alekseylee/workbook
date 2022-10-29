@@ -31,6 +31,7 @@ public class Animal {
     }
 
     public boolean isAlive(){
+        System.out.println("This cat is alive: ");
         return true;
     }
 

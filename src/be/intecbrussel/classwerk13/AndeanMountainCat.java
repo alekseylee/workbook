@@ -6,8 +6,11 @@ public class AndeanMountainCat extends Felis{
     }
 
     @Override
-    public void miauw() {
-        super.miauw();
+    public void miauw(int times) {
+        int i;
+        for(i=0; i < times; i++) {
+            System.out.println(i + " Andean Mountain cat sounds like - andeanmiiiiiau");
+        }
     }
 
     @Override

@@ -22,25 +22,37 @@ public class Felis extends Animal{
         this.age = age;
         this.badgeNo = badgeNo;
         this.shelterNo = shelterNo;
-
     }
 
-
-
-
-    public void miauw () {
+    public void miauw (int times) {
         int i;
         for(i=0; i < times; i++) {
+            System.out.println(i+ " Miauw");
         }
-        System.out.println("Miauw");
     }
 
     public  static int getVaccinatedCats(){
         return countAnimal;
     }
-    public static void setCountAnimal(int CountAnimal){
-        Felis.countAnimal = countAnimal;
+    public void setShelterNo(int shelterNo) {
+        if (shelterNo>999 || shelterNo<0){
+            System.out.println("Not possible");
+            System.exit(-1);
+        }
+        else
+            this.shelterNo = shelterNo;
     }
+
+
+    public void setBadgeNo(int badgeNo) {
+        if (badgeNo>999 || badgeNo<0){
+            System.out.println("Not possible");
+            System.exit(-1);
+        }
+        else
+            this.badgeNo = badgeNo;
+    }
+
 
 
     @Override

@@ -7,8 +7,11 @@ public class PersianCat extends Felis{
     }
 
     @Override
-    public void miauw() {
-        System.out.println("Permyau!");
+    public void miauw(int times) {
+        int i;
+        for(i=0; i < times; i++) {
+            System.out.println(i+ " Persian cat sounds like - permyaaaauuu...");
+        }
     }
 
     @Override
