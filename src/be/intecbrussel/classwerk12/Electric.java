@@ -1,24 +1,32 @@
 package be.intecbrussel.classwerk12;
 
 public class Electric extends Car{
-    private int battery;
 
-    public Electric(String color, int hp, int speed, int battery) {
-        super(color, hp, speed);
-        this.battery=battery;
+    public Electric(int speed, int battery, String color) {
+        super(speed, battery, color);
+    }
+
+    public void charge(int battery){
+        if (battery<=0){
+            battery=100;
+            System.out.println("Your battery is now fully charged");
+        }
+        else {
+            System.out.println("Your battery is already fully charged");
+        }
+    }
+
+    public void acceleration(int amount) {
+        super.acceleration(amount);
     }
 
     @Override
-    public void acceleration() {
-        this.speed = speed+ (battery/100);
-    }
-
-    public void slowDown() {
-        this.speed= speed - (battery/100);
+    public void slowDown(int amount) {
+        super.slowDown(amount);
     }
 
     @Override
-    public int getSpeed() {
-        return super.getSpeed();
+    public void park() {
+        super.park();
     }
 }
