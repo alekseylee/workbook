@@ -2,46 +2,27 @@ package be.intecbrussel.classwerk12;
 
 public class MainApp {
     public static void main(String[] args) {
+        //String color, int speed, int hp
+        //public Car(int speed, int battery, String color)
+        Car suv = new Suv("red", 0, 250, true);
+        Car cabrio = new Cabrio("yellow", 0, 200, true);
+        Car electric = new Electric(0, 60, "green");
 
-        Car suv = new Suv("red", 250, 0);
-        Car cabrio = new Cabrio("yellow", 200, 0);
-        Car electric = new Electric("green", 0, 0, 60);
-        electric.setSpeed(50);
-        System.out.println(electric.getSpeed());
-        electric.setSpeed(60);
-        electric.acceleration();
-        electric.acceleration();
-        System.out.println(electric.getSpeed());
+        suv.acceleration(50);
+        cabrio.acceleration(50);
+        electric.acceleration(50);
 
-        electric.acceleration();
-        electric.acceleration();
-        System.out.println(electric.getSpeed());
-        System.out.println();
-        System.out.println();
+        System.out.println(suv);
+        System.out.println(cabrio);
+        System.out.println(electric);
 
-//        cabrio.setSpeed(50);
-//        cabrio.slowDown();
-//        cabrio.slowDown();
-//        cabrio.slowDown();
-//        System.out.println(cabrio.getSpeed());
-//        System.out.println(cabrio.getSpeed());
-//        cabrio.acceleration();
-//        cabrio.acceleration();
-//        cabrio.acceleration();
-//        cabrio.acceleration();
-//        System.out.println(cabrio.getSpeed());
+        Car[] cars = {suv, cabrio, electric};
 
-//
-//        suv.setSpeed(50);
-//        System.out.println(suv.getSpeed());
-//        suv.acceleration();
-//        System.out.println(suv.getSpeed());
-
-
-
-
+        for (Car allcars: cars) {
+            System.out.println(allcars);
+        }
 
     }
 }
 
-//public static info()
+

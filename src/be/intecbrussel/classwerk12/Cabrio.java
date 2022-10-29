@@ -2,9 +2,15 @@ package be.intecbrussel.classwerk12;
 
 public class Cabrio extends Car {
     private boolean sunroof;
+    private boolean sunroofOpen;
 
-    public Cabrio(String color, int hp, int speed) {
-        super(color, hp, speed);
+    public Cabrio(String color, int speed, int hp, boolean sunroof) {
+        super(color, speed, hp);
+        this.sunroof = sunroof;
+    }
+
+    public boolean isSunroofOpen() {
+        return sunroofOpen;
     }
 
     public boolean isSunroof() {
@@ -14,16 +20,16 @@ public class Cabrio extends Car {
         } return this.sunroof;
     }
 
-    public void setSunroof(boolean sunroof) {
-        this.sunroof = sunroof;
+    public void setSunroofOpen(boolean sunroofOpen) {
+        this.sunroofOpen = sunroofOpen;
     }
     public void openRoof() {
         if (sunroof=false) {
-            this.setSunroof(false);
-            System.out.println("The roof is close");
+            setSunroofOpen(true);
+            System.out.println("The sunroof is open");
         } else {
-            this.setSunroof(true);
-            System.out.println("The roof is open");
+            setSunroofOpen(false);
+            System.out.println("The roof is close");
         }
     }
 
@@ -31,8 +37,15 @@ public class Cabrio extends Car {
     public int getSpeed() {
         return super.getSpeed();
     }
+    @Override
+    public void slowDown(int amount) {
+        super.slowDown(amount);
+    }
 
-
+    @Override
+    public void park() {
+        super.park();
+    }
 }
 
 
