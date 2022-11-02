@@ -1,10 +1,7 @@
 package be.intecbrussel.classwerk14.interfacesDeel3Demo;
 
-public class KeySwitch extends Car implements Switch{
+public class KeySwitch implements Switch{
 
-    public KeySwitch(Switch onOffSwitch, Motor motor, Horn horn) {
-        super(onOffSwitch, motor, horn);
-    }
 
     @Override
     public void turnOn() {

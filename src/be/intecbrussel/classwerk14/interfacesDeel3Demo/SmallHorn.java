@@ -1,6 +1,6 @@
 package be.intecbrussel.classwerk14.interfacesDeel3Demo;
 
-public class SmallHorn implements Horn{
+public class SmallHorn implements Horn {
 
 
     @Override

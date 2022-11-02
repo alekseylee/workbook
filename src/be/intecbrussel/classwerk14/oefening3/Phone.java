@@ -7,5 +7,8 @@ public class Phone implements Battery{
         this.battery = battery;
     }
 
-
+    @Override
+    public int deliverPower() {
+        return battery;
+    }
 }

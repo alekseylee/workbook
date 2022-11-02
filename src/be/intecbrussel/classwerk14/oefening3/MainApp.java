@@ -4,13 +4,20 @@ public class MainApp {
     public static void main(String[] args) {
         Laptop laptop01 = new Laptop(50);
         Phone phone01 = new Phone(78);
-
-        laptop01.deliverPower();
+//
 //        outputInfo(laptop01);
 //        outputInfo(phone01);
 
+        Battery duracelAA = new DuracelAA();
+        Battery duracelAAA = new DuracelAAA();
+        VartaAA vartaAA = new VartaAA();
+
+        Flashlight flashlight01 = new Flashlight(duracelAAA);
+        Flashlight flashlight02 = new Flashlight(new VartaAA());
+
     }
     public static void outputInfo(Battery battery) {
-        battery.deliverPower();
+        System.out.println(battery.deliverPower());
     }
+
 }
