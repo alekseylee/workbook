@@ -12,13 +12,6 @@ public class Flashlight {
         return battery;
     }
 
-    @Override
-    public String toString() {
-        return "Flashlight{" +
-                "battery=" + battery +
-                '}';
-    }
-
     public void setBattery(Battery battery) {
         this.battery = battery;
 

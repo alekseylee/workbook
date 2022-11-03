@@ -10,7 +10,7 @@ public class MainApp {
 
         Battery duracelAA = new DuracelAA();
         Battery duracelAAA = new DuracelAAA();
-        VartaAA vartaAA = new VartaAA();
+        Battery vartaAA = new VartaAA();
 
         Flashlight flashlight01 = new Flashlight(duracelAAA);
         Flashlight flashlight02 = new Flashlight(new VartaAA());
