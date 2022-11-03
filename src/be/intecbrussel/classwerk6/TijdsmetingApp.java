@@ -52,12 +52,10 @@ public class TijdsmetingApp {
                         break;
                 }
 
-            } else {
+                } else {
                 System.out.println("Time not valid");
             }
-
-
-                }
-            }
         }
+    }
+}
 

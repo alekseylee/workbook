@@ -1,4 +1,4 @@
-package be.intecbrussel.pracStuff.oefening2;
+package be.intecbrussel.pracStuff.shoesOefenings;
 
 public class ShoePair {
 
