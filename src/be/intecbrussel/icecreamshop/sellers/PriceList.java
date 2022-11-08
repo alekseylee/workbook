@@ -1,5 +1,9 @@
 package be.intecbrussel.icecreamshop.sellers;
 
+import be.intecbrussel.enumsoefening.Price;
+import be.intecbrussel.icecreamshop.eatables.Magnum;
+import be.intecbrussel.icecreamshop.eatables.MagnumType;
+
 public class PriceList {
     private double ballPrice;
     private double rocketPrice;
@@ -15,6 +19,7 @@ public class PriceList {
         this.magnumPrice = magnumPrice;
     }
 
+
     public double getBallPrice() {
         return ballPrice;
     }
@@ -24,6 +29,9 @@ public class PriceList {
     }
 
     public double getMagnumPrice() {
+        if (MagnumType.ALPINENUTS.name() == "ALPINENNUTS") {
+            return magnumPrice * 1.5;
+        }
         return magnumPrice;
     }
 

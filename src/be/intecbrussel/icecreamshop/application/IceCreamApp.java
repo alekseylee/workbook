@@ -3,6 +3,7 @@ package be.intecbrussel.icecreamshop.application;
 import be.intecbrussel.icecreamshop.eatables.Cone;
 import be.intecbrussel.icecreamshop.eatables.Flavor;
 import be.intecbrussel.icecreamshop.eatables.Magnum;
+import be.intecbrussel.icecreamshop.eatables.MagnumType;
 import be.intecbrussel.icecreamshop.sellers.IceCreamSalon;
 import be.intecbrussel.icecreamshop.sellers.IceCreamSeller;
 import be.intecbrussel.icecreamshop.sellers.PriceList;
@@ -11,8 +12,14 @@ public class IceCreamApp {
     public static void main(String[] args) {
         PriceList priceList = new PriceList();
         IceCreamSeller iceCreamSalon = new IceCreamSalon();
-
+        priceList.setMagnumPrice(2.50);
+        priceList.setBallPrice(1.50);
+        priceList.setRocketPrice(1.00);
+        Flavor[] balls = {Flavor.valueOf("LEMON"), Flavor.valueOf("BANANA")};
+        iceCreamSalon.orderCone(balls);
+        iceCreamSalon.orderMagnum();
         iceCreamSalon.orderIceRocket();
+
 
 
 

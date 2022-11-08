@@ -7,6 +7,7 @@ public class Magnum implements Eatable{
 
     public Magnum() {
     }
+
     public Magnum(MagnumType type) {
         this.type = type;
     }

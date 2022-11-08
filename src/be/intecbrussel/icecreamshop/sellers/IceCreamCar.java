@@ -22,10 +22,9 @@ public class IceCreamCar implements IceCreamSeller{
         return null;
     }
 
-
-
     @Override
     public Magnum orderMagnum() {
+        profit = pricelist.getMagnumPrice();
         return new Magnum();
     }
     Magnum prepareMagnum() {
@@ -34,6 +33,7 @@ public class IceCreamCar implements IceCreamSeller{
 
     @Override
     public IceRocket orderIceRocket() {
+        profit = pricelist.getRocketPrice();
         return new IceRocket();
     }
 

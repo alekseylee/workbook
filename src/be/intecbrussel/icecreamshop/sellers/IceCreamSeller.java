@@ -9,7 +9,6 @@ public interface IceCreamSeller extends Profitable{
     default void getProfit(double profit) {
     }
 
-
     Cone orderCone(Flavor[] balls);
     Magnum orderMagnum();
     IceRocket orderIceRocket();
