@@ -1,18 +1,19 @@
 package be.intecbrussel.icecreamshop.sellers;
 
-
-import be.intecbrussel.icecreamshop.eatables.Cone;
-import be.intecbrussel.icecreamshop.eatables.IceRocket;
-import be.intecbrussel.icecreamshop.eatables.Magnum;
+import be.intecbrussel.icecreamshop.eatables.*;
 
 public class IceCreamSalon implements IceCreamSeller{
-    private PriceList pricelist;
-    private double totalProfit;
-    @Override
-    public Cone orderCone(Cone.Flavor[] balls) {
-        return new Cone() ;
 
+    @Override
+    public Cone orderCone(Flavor[] balls) {
+        return new Cone(balls);
     }
+
+    @Override
+    public Magnum orderMagnum() {
+        return new Magnum();
+    }
+
 
     @Override
     public IceRocket orderIceRocket() {
@@ -20,20 +21,7 @@ public class IceCreamSalon implements IceCreamSeller{
     }
 
     @Override
-    public Magnum orderMagnum(Magnum.MagnumType type) {
-        return new Magnum();
-    }
+    public void getProfit(double profit) {
 
-    @Override
-    public double getProfit() {
-        return 0;
-    }
-
-    @Override
-    public String toString() {
-        return "IceCreamSalon{" +
-                "pricelist=" + pricelist +
-                ", totalProfit=" + totalProfit +
-                '}';
     }
 }

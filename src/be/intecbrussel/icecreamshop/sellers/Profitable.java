@@ -1,5 +1,6 @@
 package be.intecbrussel.icecreamshop.sellers;
 
 public interface Profitable {
-  double getProfit ();
+
+    void getProfit(double profit);
 }

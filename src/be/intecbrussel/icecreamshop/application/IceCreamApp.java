@@ -1,5 +1,7 @@
 package be.intecbrussel.icecreamshop.application;
 
+import be.intecbrussel.icecreamshop.eatables.Cone;
+import be.intecbrussel.icecreamshop.eatables.Flavor;
 import be.intecbrussel.icecreamshop.eatables.Magnum;
 import be.intecbrussel.icecreamshop.sellers.IceCreamSalon;
 import be.intecbrussel.icecreamshop.sellers.IceCreamSeller;
@@ -11,8 +13,8 @@ public class IceCreamApp {
         IceCreamSeller iceCreamSalon = new IceCreamSalon();
 
         iceCreamSalon.orderIceRocket();
-//        iceCreamSalon.orderCone( );
-        iceCreamSalon.orderMagnum(Magnum.MagnumType.valueOf("MILKCHOCOLATE"));
+
+
 
 
 

@@ -1,30 +1,20 @@
 package be.intecbrussel.icecreamshop.eatables;
 
 public class Cone implements Eatable{
-   private Flavor[] balls;
+
+    private Flavor[] balls;
 
     public Cone() {
     }
-
-    public Cone(Flavor[] balls) {
+    public Cone(Flavor[]balls) {
         this.balls = balls;
+    }
+    Flavor[] balls() {
+        return Flavor.values();
     }
 
     @Override
     public void eat() {
-        System.out.println(Flavor.values());
-
     }
 
-   public enum Flavor{
-        STRAWBERRY,
-        BANANA,
-        CHOKOLATE,
-        VANILLA,
-        LEMON,
-        STRACIATELLA,
-        MOKKA,
-        PISTACHE;
-
-    }
 }
