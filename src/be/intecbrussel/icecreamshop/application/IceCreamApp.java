@@ -17,7 +17,6 @@ public class IceCreamApp {
 
         IceRocket iceRocket = new IceRocket();
 
-
         iceCreamSalon.orderMagnum(Magnum.MagnumType.BLAСKCHOCOLATE).eat();
         iceCreamSalon.orderMagnum(Magnum.MagnumType.ALPINENUTS).eat();
         iceCreamSalon.orderCone(Cone.Flavor.values()).eat();
@@ -43,7 +42,6 @@ public class IceCreamApp {
         iceCreamSalon.orderIceRocket().eat();
 
         System.out.println(iceCreamSalon.getProfit());
-
 
         System.out.println(iceCreamSalon);
 
