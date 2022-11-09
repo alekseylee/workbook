@@ -1,17 +1,11 @@
 package be.intecbrussel.icecreamshop.sellers;
 
-import be.intecbrussel.icecreamshop.eatables.*;
+import be.intecbrussel.icecreamshop.eatables.Cone;
+import be.intecbrussel.icecreamshop.eatables.IceRocket;
+import be.intecbrussel.icecreamshop.eatables.Magnum;
 
 public interface IceCreamSeller extends Profitable{
-
-
-    @Override
-    default void getProfit(double profit) {
-    }
-
-    Cone orderCone(Flavor[] balls);
-    Magnum orderMagnum();
-    IceRocket orderIceRocket();
-
-
+    Cone orderCone (Cone.Flavor[] balls );
+    IceRocket orderIceRocket ();
+    Magnum orderMagnum (Magnum.MagnumType type);
 }

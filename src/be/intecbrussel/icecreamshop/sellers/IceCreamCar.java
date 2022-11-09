@@ -1,48 +1,71 @@
 package be.intecbrussel.icecreamshop.sellers;
 
-import be.intecbrussel.icecreamshop.eatables.*;
+import be.intecbrussel.icecreamshop.eatables.Cone;
+import be.intecbrussel.icecreamshop.eatables.IceRocket;
+import be.intecbrussel.icecreamshop.eatables.Magnum;
 
-public class IceCreamCar implements IceCreamSeller{
-    private PriceList pricelist;
+public class IceCreamCar implements IceCreamSeller {
+    private PriceList priceList;
     private Stock stock;
     private double profit;
 
-    @Override
-    public Cone orderCone(Flavor[] balls) {
-        if (balls!=null && balls.length>0){
-            profit = pricelist.getBallPrice() * balls.length;
-        }
-        else {
-            profit+= pricelist.getBallPrice();
-        }
-        return new Cone(balls);
-
-    }
-    public Cone prepareCone(Flavor[] balls) {
-        return null;
+    public IceCreamCar(PriceList priceList, Stock stock) {
+        this.priceList = priceList;
+        this.stock = stock;
     }
 
     @Override
-    public Magnum orderMagnum() {
-        profit += pricelist.getMagnumPrice();
-        return new Magnum();
+    public Cone orderCone(Cone.Flavor[] flavors) {
+        Cone cone= prepareCone(flavors);
+        if (flavors != null && flavors.length > 0) {
+            profit += priceList.getBallPrice() * flavors.length;
+        } else {
+            profit += priceList.getBallPrice();
+        }
+        return new Cone(flavors);
     }
-    Magnum prepareMagnum() {
-        return orderMagnum();
-    }
+    private Cone prepareCone(Cone.Flavor[] flavors) {
+        if(/* niet genoeg magnums */stock.getCones()==0){
+            throw new NoMoreIceCreamException();
+        }
+        stock.setCones(stock.getCones()-1);
+        return new Cone();
+    };
+
+
 
     @Override
     public IceRocket orderIceRocket() {
-        profit += pricelist.getRocketPrice();
+        IceRocket iceRocket=prepareIceRocket();
+        profit+=priceList.getRocketPrice();
+        return new IceRocket();
+    }
+    private IceRocket prepareIceRocket() {
+        if(/* niet genoeg magnums */stock.getIceRockets()==0){
+            throw new NoMoreIceCreamException();
+        }
+        stock.setIceRockets(stock.getIceRockets() - 1);
         return new IceRocket();
     }
 
     @Override
-    public void getProfit(double price) {
-
+    public Magnum orderMagnum(Magnum.MagnumType type) {
+        Magnum magnum = prepareMagnum(type);
+        profit += priceList.getMagnumPrice(type);
+        return new Magnum(type);
+    }
+    private Magnum prepareMagnum(Magnum.MagnumType type) throws NoMoreIceCreamException{
+        if(/* niet genoeg magnums */stock.getMagni()==0){
+            throw new NoMoreIceCreamException();
+        }
+        stock.setMagni(stock.getMagni() -1);
+        return new Magnum();
     }
 
-
+    @Override
+    public double getProfit() {
+        return profit;
+    }
 
 
 }

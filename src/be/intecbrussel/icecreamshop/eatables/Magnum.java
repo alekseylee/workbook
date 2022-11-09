@@ -12,14 +12,21 @@ public class Magnum implements Eatable{
         this.type = type;
     }
 
-    MagnumType getType() {
+    public MagnumType getType() {
         return type;
     }
 
     @Override
     public void eat() {
-        System.out.println("You are eating Magnum with " +getType());
+        System.out.println("eating magnum " +type);
+    }
 
+    public enum MagnumType{
+        MILKCHOCOLATE,
+        WHITECHOCOLATE,
+        BLAСKCHOCOLATE,
+        ALPINENUTS,
+        ROMAINTICSTRAWBERRIES;
     }
 
 }
