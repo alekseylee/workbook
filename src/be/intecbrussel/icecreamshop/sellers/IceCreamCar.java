@@ -25,13 +25,19 @@ public class IceCreamCar implements IceCreamSeller {
         return new Cone(flavors);
     }
     private Cone prepareCone(Cone.Flavor[] flavors) {
-        if(/* niet genoeg magnums */stock.getCones()==0){
+        if (stock.getCones() == 0 && stock.getBalls() == 0) {
             throw new NoMoreIceCreamException();
-        }
-        stock.setCones(stock.getCones()-1);
-        return new Cone();
-    };
 
+//            stock.setCones(stock.getCones() -1);
+//            stock.setBalls(stock.getBalls() - flavors.length);
+//            return new Cone();
+
+        } else {
+            System.out.println("You dont have cone or balls...");
+
+        }
+        return new Cone();
+    }
 
 
     @Override
@@ -41,7 +47,7 @@ public class IceCreamCar implements IceCreamSeller {
         return new IceRocket();
     }
     private IceRocket prepareIceRocket() {
-        if(/* niet genoeg magnums */stock.getIceRockets()==0){
+        if(stock.getIceRockets()==0){
             throw new NoMoreIceCreamException();
         }
         stock.setIceRockets(stock.getIceRockets() - 1);
@@ -55,7 +61,7 @@ public class IceCreamCar implements IceCreamSeller {
         return new Magnum(type);
     }
     private Magnum prepareMagnum(Magnum.MagnumType type) throws NoMoreIceCreamException{
-        if(/* niet genoeg magnums */stock.getMagni()==0){
+        if(stock.getMagni()==0){
             throw new NoMoreIceCreamException();
         }
         stock.setMagni(stock.getMagni() -1);
@@ -66,6 +72,5 @@ public class IceCreamCar implements IceCreamSeller {
     public double getProfit() {
         return profit;
     }
-
 
 }

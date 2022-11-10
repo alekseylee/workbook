@@ -1,20 +1,39 @@
 package be.intecbrussel.pracStuff.oefening5;
 
+import be.intecbrussel.classwerk8.Arrays;
+import be.intecbrussel.pracStuff.shoesOefenings.ShoePair;
+
+import java.sql.Array;
+import java.util.Random;
+
 public class Playstation5 {
     public static void main(String[] args) {
 
-        int PS5 = 10;
+        Random  random = new Random();
+        int randomNum = random.nextInt(20);
+        int[] gameConsole = {randomNum,randomNum,randomNum,randomNum,randomNum,randomNum,randomNum,randomNum,randomNum,randomNum};
+        for (int r=0; r< gameConsole.length; r++){
+           if (randomNum == 5 && randomNum == 11) {
+               System.out.println("You bought your PS5");
+           }
+        }
 
-        double result = (Math.random() * 60);
-//        int random = (int) result;
-//        System.out.println("\nYour number is: " + random);
+//        int [] studentPoint = {1,5,6, -9, 77 ,110, -4, 3, 10, 2};
 //
-//        if(random % 2 == 0) {
-//            System.out.println("\n Number " + random + " - is even ");
-//
-//        } else {
-//            System.out.println("\n Number " + random + " - is oneven ");
-//        }
+//        for (int x = 0; x < studentPoint.length; x++){
+//            if (studentPoint[x] > 0 && studentPoint[x] <= 3) {
+//                System.out.print(studentPoint[x] * 3 + " ");
+//            } else if (studentPoint[x] >3 && studentPoint[x] <=10) {
+//                System.out.print(studentPoint[x] + " ");
+//            } else if (studentPoint[x] >= 10) {
+//                System.out.print(studentPoint[x] / 11 + " ");
+//            } else if (studentPoint[x] < 0) {
+//                System.out.print(studentPoint[x] * -1 + " ");
+//            }
+
+
+
+
 
 
 

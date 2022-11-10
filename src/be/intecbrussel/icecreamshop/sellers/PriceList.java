@@ -39,10 +39,13 @@ public class PriceList {
 
 
     public double getMagnumPrice(Magnum.MagnumType type) {
-        if (type == Magnum.MagnumType.ALPINENUTS) {
-            setMagnumStandardPrice(1.5*magnumStandardPrice);
+        switch (type) {
+            case ALPINENUTS:
+                return 1.5 * magnumStandardPrice;
+            default:
+                return magnumStandardPrice;
         }
-        return magnumStandardPrice;
+
 
     }
 }
