@@ -2,7 +2,7 @@ package be.intecbrussel.LambdaTest;
 
 import java.time.LocalDate;
 
-public class Book{
+public class Book {
 
     public String title;
     public Person author;
@@ -31,4 +31,17 @@ public class Book{
     public String getGenre() {
         return genre;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author=" + author +
+                ", realeaseDate=" + realeaseDate +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
+
+
+
 }
