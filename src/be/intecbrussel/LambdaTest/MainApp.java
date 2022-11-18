@@ -25,7 +25,7 @@ public class MainApp {
         System.out.println(bookNewReleased);
 
         printyoungestWriter(books);
-
+        System.out.println();
         sorterByTitle(books);
 
     }
