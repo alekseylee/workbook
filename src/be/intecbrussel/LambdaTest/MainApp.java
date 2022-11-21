@@ -1,7 +1,9 @@
 package be.intecbrussel.LambdaTest;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Comparator;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class MainApp {
@@ -28,6 +30,7 @@ public class MainApp {
         System.out.println();
         sorterByTitle(books);
 
+
     }
 
     public static Book getNewestBook(Book[] books) {
@@ -53,6 +56,8 @@ public class MainApp {
                 .sorted(Comparator.comparing(Book::getTitle))
                 .forEach(System.out::println);
     }
+
+    public static void printBooksReleasedIn2016(Book[] books)
 }
 
 
