@@ -38,6 +38,7 @@ public class MainApp {
                 .sorted(Comparator.comparing(Book::getRealeaseDate).reversed())
                 .toArray(Book[]::new);
 
+
         return sortedReleaseDate[0];
     }
 
@@ -53,11 +54,12 @@ public class MainApp {
 
     public static void sorterByTitle(Book[] books) {
         Stream.of(books)
+
                 .sorted(Comparator.comparing(Book::getTitle))
                 .forEach(System.out::println);
     }
 
-    public static void printBooksReleasedIn2016(Book[] books)
+//    public static void printBooksReleasedIn2016(Book[] books)
 }
 
 
