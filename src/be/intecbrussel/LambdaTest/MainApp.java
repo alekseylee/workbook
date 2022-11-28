@@ -29,6 +29,8 @@ public class MainApp {
         printyoungestWriter(books);
         System.out.println();
         sorterByTitle(books);
+        System.out.println("---------------------");
+        printBooksReleasedIn2016(books);
 
 
     }
@@ -59,7 +61,14 @@ public class MainApp {
                 .forEach(System.out::println);
     }
 
-//    public static void printBooksReleasedIn2016(Book[] books)
+    public static void printBooksReleasedIn2016(Book[] books) {
+        Stream.of(books)
+                .filter(i -> LocalDate.now().getYear() == 2012)
+                .forEach(System.out::println);
+
+
+
+    }
 }
 
 
